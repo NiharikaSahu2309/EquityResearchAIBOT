@@ -1,6 +1,6 @@
-# ResearchGPT - AI-Powered Equity Research Assistant
+# EquityResearchAIBOT - AI-Powered Financial Analysis Assistant
 
-An advanced financial research assistant powered by Agentic RAG (Retrieval-Augmented Generation) that helps analyze financial documents, earnings transcripts, and market data with intelligent document understanding and multi-step reasoning.
+An advanced equity research assistant powered by Agentic RAG (Retrieval-Augmented Generation) that helps analyze financial documents, earnings transcripts, and market data with intelligent document understanding and multi-step reasoning.
 
 ## 🚀 Features
 
@@ -46,8 +46,8 @@ An advanced financial research assistant powered by Agentic RAG (Retrieval-Augme
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/kunal-s/app-researchgpt.git
-cd app-researchgpt
+git clone https://github.com/NiharikaSahu2309/EquityResearchAIBOT.git
+cd EquityResearchAIBOT
 ```
 
 ### 2. Backend Setup
@@ -73,14 +73,14 @@ npm install
 ```
 
 ### 4. Environment Configuration
-Create a `.env` file in the root directory:
+Create a `.env` file in the backend directory:
 ```env
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
 ## 🚀 Running the Application
 
-### Option 1: Manual Start
+### Manual Start
 ```bash
 # Terminal 1: Start Backend
 cd backend
@@ -89,15 +89,6 @@ python -m uvicorn main:app --reload --host 0.0.0.0 --port 8080
 # Terminal 2: Start Frontend
 cd frontend
 npm start
-```
-
-### Option 2: Using Scripts
-```bash
-# Windows
-start_app.bat
-
-# macOS/Linux
-./start.sh
 ```
 
 ## 🌐 Access the Application
@@ -120,7 +111,7 @@ start_app.bat
 
 ### 3. **Ask Questions**
 Example queries:
-- "What was Suzlon's revenue growth in Q1 FY26?"
+- "What was the company's revenue growth in Q1?"
 - "Analyze the key risks mentioned in the earnings call"
 - "Compare the financial performance metrics"
 
@@ -154,7 +145,7 @@ The AI provides:
 ## 📁 Project Structure
 
 ```
-app-researchgpt/
+EquityResearchAIBOT/
 ├── backend/
 │   ├── main.py              # FastAPI application
 │   ├── simple_rag.py        # Enhanced RAG pipeline
@@ -166,6 +157,10 @@ app-researchgpt/
 │   ├── src/                 # React source code
 │   ├── public/              # Static assets
 │   └── package.json         # Node.js dependencies
+├── Stock data/              # Sample datasets
+│   ├── indexData.csv
+│   ├── indexInfo.csv
+│   └── indexProcessed.csv
 ├── .gitignore              # Git ignore rules
 └── README.md               # Project documentation
 ```
@@ -186,6 +181,39 @@ PORT=8080
 NODE_ENV=development
 ```
 
+## 📊 Sample Data
+
+The `Stock data/` folder contains sample datasets:
+- `indexData.csv`: Market index data with historical prices
+- `indexInfo.csv`: Index information and metadata
+- `indexProcessed.csv`: Processed index data for analysis
+
+## 🤖 AI Capabilities
+
+### Document Analysis
+- **Financial Reports**: Automatic extraction and analysis of financial statements
+- **Earnings Transcripts**: Processing of earnings call transcripts
+- **Market Research**: Analysis of research reports and market data
+
+### Multi-Modal Analysis
+- **Text Analysis**: NLP-powered document understanding
+- **Numerical Analysis**: Statistical analysis of financial data
+- **Time Series**: Trend analysis and forecasting
+
+### Intelligent Responses
+- **Summarized Answers**: Concise, structured responses
+- **Source Attribution**: Clear citation of information sources
+- **Context Awareness**: Maintains conversation context for follow-up questions
+
+## 🔄 Recent Updates
+
+- ✅ Enhanced search algorithm with financial synonyms
+- ✅ Improved prompt engineering for summarized responses
+- ✅ Multi-criteria relevance scoring
+- ✅ Agentic reasoning with step-by-step analysis
+- ✅ Better context extraction and citation
+- ✅ Increased context window for comprehensive analysis
+
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -201,101 +229,10 @@ This project is licensed under the MIT License.
 ## 🆘 Support
 
 For issues and questions:
-1. Check the [Issues](https://github.com/kunal-s/app-researchgpt/issues) page
+1. Check the [Issues](https://github.com/NiharikaSahu2309/EquityResearchAIBOT/issues) page
 2. Create a new issue with detailed description
 3. Include error logs and steps to reproduce
 
-## 🔄 Recent Updates
-
-- ✅ Enhanced search algorithm with financial synonyms
-- ✅ Improved prompt engineering for summarized responses
-- ✅ Multi-criteria relevance scoring
-- ✅ Agentic reasoning with step-by-step analysis
-- ✅ Better context extraction and citation
-- ✅ Increased context window for comprehensive analysis
-
 ---
 
-**Built with ❤️ for financial research and analysis**
-   - Ask questions about your uploaded documents
-   - Use quick question buttons for common analyses
-   - Maintain conversation history for follow-up questions
-
-4. **Manage Knowledge Base**:
-   - Use the RAG Management tab to add more documents
-   - Search through your document collection
-   - Clear the knowledge base when needed
-
-5. **Stock Research**:
-   - Enter a stock symbol (e.g., AAPL, MSFT, GOOGL) in any tab
-   - Get real-time stock data and analysis
-
-## File Support
-
-### CSV Files
-- Automatic data type detection
-- Statistical summaries
-- Interactive charts and visualizations
-
-### Excel Files (XLS/XLSX)
-- Full spreadsheet support
-- Multiple sheet handling
-- Data preprocessing and cleaning
-
-### PDF Files
-- Text extraction and analysis
-- Financial report processing
-- Document summarization
-
-## AI Analysis Capabilities
-
-- **Document-Based Q&A**: Ask questions about uploaded financial reports, data, and documents
-- **Financial Performance Analysis**: Comprehensive analysis of financial metrics and ratios
-- **Market Trend Identification**: Identify and analyze market patterns and trends
-- **Risk Assessment and Management**: Evaluate investment risks and mitigation strategies
-- **Investment Recommendations**: AI-powered investment suggestions based on data
-- **Comparative Analysis**: Compare different stocks, sectors, or time periods
-- **Technical Indicator Analysis**: Analysis of technical trading indicators
-- **Conversation Memory**: Maintain context across multiple questions
-- **Real-time Data Integration**: Combine uploaded documents with live market data
-
-## Sample Data
-
-The `Stock data/` folder contains sample datasets:
-- `indexData.csv`: Market index data
-- `indexInfo.csv`: Index information
-- `indexProcessed.csv`: Processed index data
-
-## API Integration
-
-### GROQ API
-- Model: Llama3-8B-8192 (updated from deprecated Mixtral)
-- Specialized financial analysis prompts
-- Context-aware responses with RAG integration
-- Conversation memory and follow-up handling
-
-### RAG Pipeline
-- Vector database: ChromaDB (local storage)
-- Embeddings: Sentence Transformers (all-MiniLM-L6-v2)
-- Document chunking and semantic search
-- Privacy-first: all processing happens locally
-
-### Yahoo Finance API
-- Real-time stock prices
-- Historical data
-- Company fundamentals
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License.
-
-## Support
-
-For issues and questions, please create an issue in the repository.
+**Built with ❤️ for financial research and analysis by Niharika Sahu**

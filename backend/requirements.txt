@@ -1,0 +1,37 @@
+fastapi>=0.100.0
+uvicorn[standard]>=0.20.0
+python-multipart>=0.0.6
+pydantic>=2.0.0
+pandas>=2.0.0
+numpy>=1.21.0
+plotly>=5.15.0
+yfinance>=0.2.0
+python-dotenv>=1.0.0
+groq>=0.4.0
+
+# File processing
+PyPDF2==3.0.1
+openpyxl==3.1.2
+xlrd==2.0.1
+
+# Web scraping
+beautifulsoup4==4.12.2
+lxml==4.9.3
+
+# Data analysis and visualization
+seaborn==0.12.2
+matplotlib==3.8.2
+
+# RAG components (optional)
+langchain==0.1.0
+chromadb==0.4.18
+sentence-transformers==2.2.2
+tiktoken==0.5.2
+
+# Agentic RAG dependencies
+scikit-learn==1.3.2
+regex==2023.10.3
+
+# Development
+pytest==7.4.3
+pytest-asyncio==0.21.1

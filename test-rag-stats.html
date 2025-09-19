@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAG Stats Test</title>
+</head>
+<body>
+    <h1>RAG Statistics Test</h1>
+    <button onclick="testRagStats()">Test RAG Stats</button>
+    <div id="results"></div>
+
+    <script>
+        async function testRagStats() {
+            try {
+                const response = await fetch('http://localhost:8085/rag/stats');
+                const data = await response.json();
+                document.getElementById('results').innerHTML = 
+                    '<h2>RAG Stats:</h2><pre>' + JSON.stringify(data, null, 2) + '</pre>';
+            } catch (error) {
+                document.getElementById('results').innerHTML = 
+                    '<h2>Error:</h2><p>' + error.message + '</p>';
+            }
+        }
+    </script>
+</body>
+</html>
